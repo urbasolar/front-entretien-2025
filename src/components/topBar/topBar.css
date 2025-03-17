@@ -1,0 +1,7 @@
+@tailwind components;
+
+@layer components {
+  .top-bar {
+    @apply text-neutral-dark-black flex flex-row w-full justify-between items-center h-14 bg-white dark:bg-neutral-black dark:text-white px-4 mb-[2px] border-l-2 dark:border-neutral-dark-black border-neutral-gray;
+  }
+}

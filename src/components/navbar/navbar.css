@@ -1,0 +1,23 @@
+@tailwind utilities;
+
+.navbar {
+  @apply transition-[width] duration-300 max-w-72 bg-white dark:bg-dark-mid flex flex-col justify-between;
+}
+
+.navbar-button {
+  @apply bg-neutral-gray dark:bg-dark py-1 px-2 rounded-lg hover:bg-primary;
+}
+
+.navbar-text {
+  @apply text-neutral-black dark:text-white text-nowrap font-bold text-s;
+}
+
+.hover-icon:hover #icon {
+  @apply text-white;
+}
+
+@layer utilities {
+  .navbar-navlink {
+    @apply bg-primary rounded-lg;
+  }
+}

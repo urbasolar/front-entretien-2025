@@ -1,0 +1,35 @@
+@tailwind components;
+
+@layer components {
+  .table {
+    &__head {
+      &-th {
+        @apply bg-white dark:bg-dark-mid p-m text-sm last:rounded-tr-lg dark:text-white;
+      }
+      &-th:first-child {
+        @apply first:rounded-tl-lg;
+      }
+      &-inside {
+        @apply flex flex-row gap-2;
+      }
+    }
+    &__body {
+      @apply w-full;
+      &-tr {
+        @apply text-sm font-normal dark:text-white w-screen;
+      }
+      &-td {
+        @apply p-m text-sm text-ellipsis overflow-hidden whitespace-nowrap;
+      }
+      &-tr:nth-child(odd) {
+        @apply bg-neutral-gray dark:bg-dark;
+      }
+      &-tr:nth-child(even) {
+        @apply bg-white dark:bg-dark-mid;
+      }
+      &-tr:hover {
+        @apply bg-blue-400/35;
+      }
+    }
+  }
+}

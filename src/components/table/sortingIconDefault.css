@@ -1,0 +1,19 @@
+@tailwind components;
+
+@layer components {
+  .sortingIcon {
+    @apply flex flex-col items-center text-neutral-500 w-2;
+    &__asc {
+      @apply -mb-1;
+      &.active {
+        @apply text-primary;
+      }
+    }
+    &__desc {
+      @apply -mt-1;
+      &.active {
+        @apply text-primary;
+      }
+    }
+  }
+}

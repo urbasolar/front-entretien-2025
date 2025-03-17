@@ -1,0 +1,7 @@
+@tailwind components;
+
+@layer components {
+  .checkbox {
+    @apply relative disabled:border-dark-lighter disabled:bg-gray-500 appearance-none rounded-md border transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:opacity-0 before:transition-opacity checked:border-white-400 checked:bg-primary-500 checked:before:bg-primary-500 hover:before:opacity-10;
+  }
+}

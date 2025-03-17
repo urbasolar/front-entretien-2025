@@ -1,0 +1,11 @@
+.outputComponent {
+  @apply w-full flex gap-1 flex-col;
+
+  &__container {
+    @apply flex items-center;
+  }
+
+  &__text {
+    @apply dark:text-white text-neutral-black p-m font-normal dark:bg-dark bg-neutral-gray border-l-2 pl-4;
+  }
+}

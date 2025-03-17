@@ -1,0 +1,119 @@
+@tailwind components;
+
+@layer components {
+  .tooltip {
+    @apply inline-flex;
+    &.rel {
+      @apply relative;
+    }
+    &.abs {
+      @apply absolute -translate-y-1/2;
+    }
+    &__target {
+      @apply flex;
+      flex: inherit;
+    }
+    &__container {
+      @apply absolute w-48 flex justify-center items-center pointer-events-none rounded -left-1/4;
+      bottom: calc(100% + 8px);
+
+      &.black {
+        @apply dark:text-white bg-white dark:bg-black;
+      }
+      &.primary {
+        @apply text-primary bg-white dark:text-white dark:bg-primary;
+      }
+
+      &.top {
+        @apply w-max;
+        bottom: calc(100% + 8px);
+      }
+      &.bottom {
+        @apply w-max;
+        top: calc(100% + 8px);
+        bottom: unset !important;
+      }
+
+      &.left {
+        @apply mr-0 w-max top-1/2;
+        left: unset;
+        right: calc(100% + 8px);
+      }
+
+      &.right {
+        @apply ml-0 w-max top-1/2;
+        left: calc(100% + 8px);
+      }
+      &-box {
+        @apply flex relative justify-center items-center px-2 py-2 rounded;
+        box-shadow:
+          0 4px 14px rgba(0, 0, 0, 0.15),
+          0 4px 8px rgba(0, 0, 0, 0.2);
+        &.black {
+          @apply bg-white dark:bg-black;
+        }
+        &.primary {
+          @apply bg-white dark:bg-primary;
+        }
+
+        &::after {
+          @apply absolute border-4 border-solid;
+          content: "";
+          left: calc(50% - 4px);
+          width: 1px;
+          height: 1px;
+        }
+
+        &.top {
+          &::after {
+            @apply top-full;
+            &.black {
+              @apply border-t-white dark:border-t-black border-x-transparent border-b-transparent;
+            }
+            &.primary {
+              @apply border-t-white dark:border-t-primary border-x-transparent border-b-transparent;
+            }
+          }
+        }
+        &.bottom {
+          &::after {
+            @apply bottom-full;
+            top: unset;
+            &.black {
+              @apply border-b-white dark:border-b-black border-x-transparent border-t-transparent;
+            }
+            &.primary {
+              @apply border-b-white dark:border-b-primary border-x-transparent border-t-transparent;
+            }
+          }
+        }
+
+        &.left {
+          &::after {
+            @apply left-full;
+            top: calc(50% - 4px);
+            &.black {
+              @apply border-l-white dark:border-l-black border-y-transparent border-r-transparent;
+            }
+            &.primary {
+              @apply border-l-white dark:border-l-primary border-y-transparent border-r-transparent;
+            }
+          }
+        }
+        &.right {
+          &::after {
+            @apply right-full;
+            left: unset;
+            top: calc(50% - 4px);
+            &.black {
+              @apply border-r-white dark:border-r-black border-y-transparent border-l-transparent;
+            }
+            &.primary {
+              @apply border-r-white dark:border-r-primary border-y-transparent border-l-transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+}

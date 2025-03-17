@@ -1,0 +1,66 @@
+@tailwind components;
+
+@layer components {
+  .tabs {
+    @apply w-full h-fit bg-white dark:bg-dark-mid rounded-t px-4;
+    margin-left: 2px;
+    margin-right: 2px;
+
+    &__container {
+      @apply grid grid-flow-col auto-cols-max gap-4 w-full h-12;
+    }
+
+    &__header {
+      @apply cursor-pointer h-12 p-2 transition-colors select-none duration-200 items-center;
+      &-inside {
+        @apply grid grid-flow-col auto-cols-max gap-3;
+        &-element {
+          @apply leading-5 text-white;
+          &:first-child .tabs-icon {
+            @apply dark:text-white text-primary;
+          }
+        }
+        &-label {
+          @apply font-bold;
+          &.collapsible {
+            @apply w-0 opacity-0 invisible overflow-y-hidden duration-200 ease-in transition-all;
+          }
+          &.active {
+            @apply visible opacity-100 w-max;
+          }
+        }
+        &-rightelement {
+          @apply leading-5;
+          &.active {
+            @apply text-primary;
+          }
+        }
+      }
+    }
+
+    &__header:hover {
+      @apply bg-primary-200;
+    }
+    &__header.active {
+      @apply dark:text-white border-b-6 border-primary font-medium;
+    }
+
+    &__header:not(.active) {
+      @apply text-neutral-black dark:text-white-800;
+    }
+    &.collapsible {
+      &__header-inside-label {
+        &-inside {
+          &-label {
+            @apply invisible opacity-0 transition-all duration-200 ease-in w-0 overflow-y-hidden;
+            &.active {
+              @apply visible opacity-100 w-max;
+            }
+          }
+        }
+      }
+      @apply rounded-b;
+    }
+  }
+}
+

@@ -1,0 +1,16 @@
+export const config = {
+    API_URL: import.meta.env.VITE_API_URL || 'https://dev-monitor.urbasolar.com/api',
+    GRAPHQL_URL: import.meta.env.VITE_GRAPHQL_URL || '',
+    NAME: import.meta.env.VITE_NAME || 'app-front-dev',
+    REALM: import.meta.env.VITE_REALM || 'Development',
+    URL: import.meta.env.VITE_URL || 'https://authenticate.urbasolar.com/auth',
+    SSL_REQUIRED: import.meta.env.VITE_SSL_REQUIRED || 'external',
+    CLIENTID: import.meta.env.VITE_CLIENTID || 'Monitor-Local-Front',
+    PUBLIC_CLIENT: import.meta.env.VITE_PUBLIC_CLIENT || true,
+    CONFIDENTIAL_PORT: import.meta.env.VITE_CONFIDENTIAL_PORT || 0,
+    APM_SERVER_URL: import.meta.env.VITE_APM_SERVER_URL || '',
+    AIRTABLE_HPE_PLANNING_LINK: import.meta.env.VITE_AIRTABLE_HPE_PLANNING_LINK || '',
+    AIRTABLE_HPE_SUPERVISOR_FIELD_ID: import.meta.env.VITE_AIRTABLE_HPE_SUPERVISOR_FIELD_ID || '',
+    AIRTABLE_HPE_CENTRALES_FIELD_ID: import.meta.env.VITE_AIRTABLE_HPE_CENTRALES_FIELD_ID || '',
+    EVENTS_ENABLED: import.meta.env.VITE_EVENTS_ENABLED || '',
+  }

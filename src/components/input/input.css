@@ -1,0 +1,7 @@
+@tailwind components;
+
+@layer components {
+  .input {
+    @apply appearance-none placeholder:text-white/50 p-m font-normal text-white rounded-lg bg-dark h-10 border border-solid border-white hover:border-primary focus:border-primary focus:outline-0 disabled:border-dark-lighter disabled:cursor-not-allowed;
+  }
+}
