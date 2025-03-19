@@ -1,7 +1,7 @@
-import { createBrowserRouter } from 'react-router-dom'
+import { createBrowserRouter } from 'react-router-dom';
 
-import { Playground } from '@pages/sandbox/sandbox'
-import { Layout } from '@layouts/mainLayout'
+import { Layout } from '@layouts/mainLayout';
+import { Home } from '@/pages/home';
 
 export const router = createBrowserRouter([
   {
@@ -9,16 +9,9 @@ export const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        path: '/:component',
-        element: <Playground />,
-        children: [
-          {
-            path: '/:component/:active_tab',
-            element: <div></div>,
-          },
-        ],
+        path: '/home',
+        element: <Home />,
       },
     ],
   },
-])
-
+]);
