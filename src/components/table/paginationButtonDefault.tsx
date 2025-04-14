@@ -1,17 +1,17 @@
-import { TPaginationButtonDefault } from "@components/table";
-
-import "@components/table/paginationButtonDefault.css";
-import { usePaginationRow } from "./paginationRow.hook";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faChevronLeft,
   faChevronRight,
   faChevronsLeft,
   faChevronsRight,
-} from "@fortawesome/pro-regular-svg-icons";
+} from '@fortawesome/pro-regular-svg-icons';
+
+import '@components/table/paginationButtonDefault.css';
+import { usePaginationRow } from './paginationRow.hook';
+import { TPaginationButtonDefault } from './table.types';
 
 export const PaginationButtonDefault = <T,>(
-  props: TPaginationButtonDefault<T>,
+  props: TPaginationButtonDefault<T>
 ): JSX.Element => {
   const { table } = props;
   const { handleInputPageIndex, value } = usePaginationRow(props);
@@ -21,7 +21,7 @@ export const PaginationButtonDefault = <T,>(
       <div className="content-end">
         <button
           className={`pagination__button ${
-            !table.getCanPreviousPage() ? "disabled" : ""
+            !table.getCanPreviousPage() ? 'disabled' : ''
           }`}
           onClick={() => handleInputPageIndex(1)}
           disabled={!table.getCanPreviousPage()}
@@ -32,7 +32,7 @@ export const PaginationButtonDefault = <T,>(
       <div className="content-end">
         <button
           className={`pagination__button ${
-            !table.getCanPreviousPage() ? "disabled" : ""
+            !table.getCanPreviousPage() ? 'disabled' : ''
           }`}
           onClick={() => handleInputPageIndex(Number(value) - 1)}
           disabled={!table.getCanPreviousPage()}
@@ -54,7 +54,7 @@ export const PaginationButtonDefault = <T,>(
       <div className="content-end">
         <button
           className={`pagination__button ${
-            !table.getCanNextPage() ? "disabled" : ""
+            !table.getCanNextPage() ? 'disabled' : ''
           }`}
           onClick={() => handleInputPageIndex(Number(value) + 1)}
           disabled={!table.getCanNextPage()}
@@ -65,7 +65,7 @@ export const PaginationButtonDefault = <T,>(
       <div className="content-end">
         <button
           className={`pagination__button ${
-            !table.getCanNextPage() ? "disabled" : ""
+            !table.getCanNextPage() ? 'disabled' : ''
           }`}
           onClick={() => handleInputPageIndex(table.getPageCount() - 1)}
           disabled={!table.getCanNextPage()}
