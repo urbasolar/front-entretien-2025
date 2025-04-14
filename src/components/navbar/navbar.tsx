@@ -1,5 +1,4 @@
-import { faArrowRight } from '@fortawesome/pro-regular-svg-icons';
-import { faArrowLeft } from '@fortawesome/pro-solid-svg-icons';
+import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { type FC } from 'react';
 import { NavLink } from 'react-router-dom';
@@ -20,7 +19,7 @@ export const Navbar: FC<TNavbar> = (props: TNavbar): JSX.Element => {
 
   return (
     <div
-      id='navbar'
+      id="navbar"
       className={computeStyles('navbar', {
         condition: openNavbar,
         valid: 'w-64',
@@ -28,16 +27,16 @@ export const Navbar: FC<TNavbar> = (props: TNavbar): JSX.Element => {
       })}
     >
       <div>
-        <div className='p-l flex justify-between'>
+        <div className="p-l flex justify-between">
           {openNavbar && (
             <img
               src={themeMode === ETheme.dark ? logo : darkLogo}
-              alt='logo'
-              className='text-neutral-black dark:text-white'
+              alt="logo"
+              className="text-neutral-black dark:text-white"
             />
           )}
           <button
-            type='button'
+            type="button"
             className={computeStyles('navbar-button', {
               condition: openNavbar,
               unvalid: 'w-full',
@@ -46,14 +45,14 @@ export const Navbar: FC<TNavbar> = (props: TNavbar): JSX.Element => {
           >
             <FontAwesomeIcon
               icon={openNavbar ? faArrowLeft : faArrowRight}
-              className='text-neutral-black dark:text-white font-extrabold'
+              className="text-neutral-black dark:text-white font-extrabold"
             />
           </button>
         </div>
-        <nav className='p-l'>
+        <nav className="p-l">
           <ul>
             {items.map((item) => (
-              <li key={item.text} className='py-xs'>
+              <li key={item.text} className="py-xs">
                 <NavLink
                   end
                   to={item.path}
@@ -76,7 +75,7 @@ export const Navbar: FC<TNavbar> = (props: TNavbar): JSX.Element => {
                     >
                       <FontAwesomeIcon
                         icon={item.icon}
-                        id='icon'
+                        id="icon"
                         className={computeStyles('text-l font-bold', {
                           condition: isActiveForPaths(isActive, item.pathname),
                           valid: 'text-neutral-black dark:text-white',
@@ -110,7 +109,7 @@ export const Navbar: FC<TNavbar> = (props: TNavbar): JSX.Element => {
               return (
                 <li
                   key={item.text}
-                  className='py-xs cursor-pointer'
+                  className="py-xs cursor-pointer"
                   onClick={item.onClick}
                 >
                   <div
@@ -124,7 +123,7 @@ export const Navbar: FC<TNavbar> = (props: TNavbar): JSX.Element => {
                   >
                     <FontAwesomeIcon
                       icon={item.icon}
-                      id='icon'
+                      id="icon"
                       className={computeStyles('text-l text-white font-bold', {
                         valid: 'text-neutral-black dark:text-white',
                       })}

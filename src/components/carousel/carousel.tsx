@@ -1,8 +1,8 @@
 import { FC, useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faArrowRight } from '@fortawesome/pro-regular-svg-icons';
 
 import { TCarouselProps } from './carousel.type';
+import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 export const Carousel: FC<TCarouselProps> = (props: TCarouselProps) => {
   const {

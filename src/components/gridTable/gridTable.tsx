@@ -1,10 +1,6 @@
-import {
-  faPen,
-  faSquarePlus,
-  faTrash,
-} from '@fortawesome/pro-regular-svg-icons';
+import { faSquarePlus } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWarning } from '@fortawesome/pro-solid-svg-icons';
+import { faPen, faTrash, faWarning } from '@fortawesome/free-solid-svg-icons';
 
 import { Button } from '@components/button/button';
 import Input from '@components/input/input';
