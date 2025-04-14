@@ -1,4 +1,4 @@
-import { IconDefinition } from "@fortawesome/pro-regular-svg-icons";
+import { IconDefinition } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIconProps } from "@fortawesome/react-fontawesome";
 
 export type TSection = {

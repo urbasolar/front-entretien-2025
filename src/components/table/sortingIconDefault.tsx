@@ -1,10 +1,10 @@
-import { FC } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSortUp, faSortDown } from "@fortawesome/pro-solid-svg-icons";
+import { FC } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSortUp, faSortDown } from '@fortawesome/free-solid-svg-icons';
 
-import { TSortingIconDefault } from "@components/table/table.types";
+import { TSortingIconDefault } from '@components/table/table.types';
 
-import "@components/table/sortingIconDefault.css";
+import '@components/table/sortingIconDefault.css';
 
 export const SortingIconDefault: FC<TSortingIconDefault> = ({
   sortingDirection,
@@ -14,13 +14,13 @@ export const SortingIconDefault: FC<TSortingIconDefault> = ({
       <FontAwesomeIcon
         icon={faSortUp}
         className={`sortingIcon__asc ${
-          sortingDirection === "asc" ? "active" : ""
+          sortingDirection === 'asc' ? 'active' : ''
         }`}
       />
       <FontAwesomeIcon
         icon={faSortDown}
         className={`sortingIcon__desc ${
-          sortingDirection === "desc" ? "active" : ""
+          sortingDirection === 'desc' ? 'active' : ''
         }`}
       />
     </div>

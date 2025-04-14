@@ -1,6 +1,5 @@
 import { flexRender, Header } from '@tanstack/react-table';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSpinner } from '@fortawesome/pro-regular-svg-icons';
 
 import { Select } from '@components/select/select';
 import { TOptionsWithIndex } from '@components/select/select.types';
@@ -10,6 +9,7 @@ import '@components/table/table.css';
 import { THeader, TTable } from './table.types';
 import { SortingIconDefault } from './sortingIconDefault';
 import { PaginationButtonDefault } from './paginationButtonDefault';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 const HeaderElement = <T,>(props: THeader<T>) => {
   const { table } = props;

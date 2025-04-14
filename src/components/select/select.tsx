@@ -1,4 +1,4 @@
-import { faChevronUp, faXmark } from '@fortawesome/pro-solid-svg-icons';
+import { faChevronUp, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import type React from 'react';
 

@@ -1,13 +1,13 @@
-import {
-  faEllipsis,
-  faEllipsisVertical,
-} from '@fortawesome/pro-regular-svg-icons';
 import { FC } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { useDropDown } from '@components/dropDown/dropDown.hook';
 import { TDropDown } from '@components/dropDown/dropDown.types';
 import { ROW } from '@components/dropDown/dropDown.constants';
+import {
+  faEllipsis,
+  faEllipsisVertical,
+} from '@fortawesome/free-solid-svg-icons';
 
 export const DrowDown: FC<TDropDown> = (props: TDropDown) => {
   const { children, direction = ROW, position = 'br' } = props;

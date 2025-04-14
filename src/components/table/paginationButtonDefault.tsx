@@ -1,14 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faChevronLeft,
-  faChevronRight,
-  faChevronsLeft,
-  faChevronsRight,
-} from '@fortawesome/pro-regular-svg-icons';
 
 import '@components/table/paginationButtonDefault.css';
 import { usePaginationRow } from './paginationRow.hook';
 import { TPaginationButtonDefault } from './table.types';
+import {
+  faChevronRight,
+  faChevronLeft,
+} from '@fortawesome/free-solid-svg-icons';
 
 export const PaginationButtonDefault = <T,>(
   props: TPaginationButtonDefault<T>
@@ -26,7 +24,7 @@ export const PaginationButtonDefault = <T,>(
           onClick={() => handleInputPageIndex(1)}
           disabled={!table.getCanPreviousPage()}
         >
-          <FontAwesomeIcon icon={faChevronsLeft} />
+          <FontAwesomeIcon icon={faChevronLeft} />
         </button>
       </div>
       <div className="content-end">
@@ -70,7 +68,7 @@ export const PaginationButtonDefault = <T,>(
           onClick={() => handleInputPageIndex(table.getPageCount() - 1)}
           disabled={!table.getCanNextPage()}
         >
-          <FontAwesomeIcon icon={faChevronsRight} />
+          <FontAwesomeIcon icon={faChevronRight} />
         </button>
       </div>
     </div>

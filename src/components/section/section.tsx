@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import { TSection } from '@components/section/section.types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faXmark } from '@fortawesome/pro-solid-svg-icons';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 export const Section: FC<TSection> = (props: TSection) => {
   const {
